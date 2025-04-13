@@ -1,0 +1,143 @@
+/* Main layout */
+.services-page {
+    background-color: white;
+    color: black;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 16px;
+  }
+  
+  /* Header */
+  .header {
+    margin-bottom: 48px;
+  }
+  
+  .header h1 {
+    font-size: 1.875rem;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  
+  .divider {
+    width: 64px;
+    height: 2px;
+    background-color: black;
+  }
+  
+  /* Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  @media (min-width: 768px) {
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Service Item */
+  .service-item {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .service-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: black;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .service-content {
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid white;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .service-content span {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: white;
+  }
+  
+  /* Accents */
+  .accent {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+  }
+  
+  .green-accent {
+    background-color: #22c55e;
+  }
+  
+  .red-accent {
+    background-color: #ef4444;
+  }
+  
+  .bottom-left {
+    bottom: 16px;
+    left: 16px;
+  }
+  
+  .top-right {
+    top: 16px;
+    right: 16px;
+  }
+  
+  /* Typography */
+  h3 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  
+  p {
+    font-size: 0.75rem;
+    color: #52525b;
+  }
+  
+  .info-button {
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.info-button:hover {
+    background: #333;
+}
+
+.description-box {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000;
+}
