@@ -50,12 +50,12 @@ const Home = () => {
       </div>
 
             {/* Section 2 */}
-            <div>
+            <div className='section2-container'>
        <Section2 />
      </div>
 
      {/* Section 3 */}
-     <div >
+     <div className='section3-container'>
        <Section3 />
      </div>
     </>
