@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="alphaledger-page">
+      <div className="homecontainer-page">
         {/* ✅ Schlanke Navbar */}
        
 

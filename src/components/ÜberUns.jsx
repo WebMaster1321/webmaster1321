@@ -20,7 +20,7 @@ export default function AboutPage() {
       <div className="about-header">
         <div className="about-title-container">
         
-          <h1 className="about-title">Über Mich</h1>
+          <h1 className="about-title">Über Uns</h1>
           <div className="title-line"></div>
         </div>
       </div>
@@ -30,9 +30,9 @@ export default function AboutPage() {
           <div className="intro-content">
             <h2>Web Master</h2>
             <p className="intro-text">
-              Als leidenschaftlicher Webdesigner und Entwickler biete ich maßgeschneiderte Websites für Ihr
-              Unternehmen. Mit einem Fokus auf minimalistisches Design und benutzerfreundliche Funktionalität erschaffe
-              ich Websites, die nicht nur gut aussehen, sondern auch Ergebnisse liefern.
+              Als leidenschaftlicher Webdesigner und Entwickler bieten wir maßgeschneiderte Websites für Ihr
+              Unternehmen. Mit einem Fokus auf minimalistisches Design und benutzerfreundliche Funktionalität erschaffen
+              wir Websites, die nicht nur gut aussehen, sondern auch Ergebnisse liefern.
             </p>
             <div className="stats-container">
               <div className="stat-item">
@@ -63,7 +63,7 @@ export default function AboutPage() {
           <div className="pricing-content">
             <h2>Individuelle Preisgestaltung</h2>
             <p>
-              Bei Web Master verstehe ich, dass jedes Projekt einzigartig ist. Meine Preise sind Richtwerte und können
+              Bei Web Master verstehen wir, dass jedes Projekt einzigartig ist. Unsere Preise sind Richtwerte und können
               je nach Ihren spezifischen Anforderungen variieren.
             </p>
 
@@ -153,26 +153,26 @@ export default function AboutPage() {
             <div className="process-step">
               <div className="step-number">01</div>
               <h3>Gespräch</h3>
-              <p>Ich beginne mit einem ausführlichen Chat, um Ihre Ziele und Anforderungen zu verstehen.</p>
+              <p>Wir beginnen mit einem ausführlichen Chat oder Telefonat, um Ihre Ziele und Anforderungen zu verstehen.</p>
             </div>
 
             <div className="process-step">
               <div className="step-number">02</div>
               <h3>Konzeption</h3>
-              <p>Ich entwickle ein maßgeschneidertes Konzept und erstelle Wireframes für Ihr Projekt.</p>
+              <p>Wir entwicklen ein maßgeschneidertes Konzept und erstelle Wireframes für Ihr Projekt.</p>
             </div>
 
             <div className="process-step">
               <div className="step-number">03</div>
               <h3>Design</h3>
-              <p>Ich erstelle ein visuell ansprechendes Layout, das Ihre Marke perfekt repräsentiert.</p>
+              <p>Wir erstellen ein visuell ansprechendes Layout, das Ihre Marke perfekt repräsentiert.</p>
             </div>
 
             <div className="process-step">
               <div className="step-number">04</div>
               <h3>Entwicklung</h3>
               <p>
-                Ich setze das Design in funktionalen, responsiven Code um und integriere alle gewünschten Funktionen.
+                Wir setzen das Design in funktionalen, responsiven Code um und integriere alle gewünschten Funktionen.
               </p>
             </div>
 
@@ -180,7 +180,7 @@ export default function AboutPage() {
               <div className="step-number">05</div>
               <h3>Launch</h3>
               <p>
-                Nach gründlichen Tests veröffentliche ich Ihre Website und stelle sicher, dass alles reibungslos läuft.
+                Nach gründlichen Tests veröffentlichen wir Ihre Website und stellen sicher, dass alles reibungslos läuft.
               </p>
             </div>
           </div>
@@ -190,8 +190,8 @@ export default function AboutPage() {
           <div className="cta-content">
             <h2>Bereit für Ihre maßgeschneiderte Website?</h2>
             <p>
-              Kontaktieren Sie mich ganz einfach per Chat oder E-Mail mit Ihren spezifischen Wünschen. Ich antworte
-              schnell und erstelle Ihnen ein individuelles Angebot, das perfekt zu Ihrem Projekt passt.
+              Kontaktieren Sie uns ganz einfach per Chat oder E-Mail mit Ihren spezifischen Wünschen. Wir antworten
+              schnell und erstellen Ihnen ein individuelles Angebot, das perfekt zu Ihrem Projekt passt.
             </p>
             <div className="cta-buttons">
               <a  className="cta-button email"   onClick={() => navigate("/kontact")}>
