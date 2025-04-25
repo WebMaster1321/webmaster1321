@@ -233,17 +233,18 @@ body {
     margin-top: -100px;
   }
 }
-/* Abstand zwischen Section2 und Section3 wiederherstellen */
 
 
 /* Optional für Tablets im Hochformat */
-@media (max-width: 1024px) {
+/* Nur für Tablets im Hochformat (z. B. iPad portrait) */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .section2-container {
-    margin-bottom: 150px;
+    margin-bottom: 160px;
   }
 
   .section3-container {
-    padding-top: 250px;
+    padding-top: 190px;
   }
 }
+
 
