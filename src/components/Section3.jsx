@@ -83,7 +83,7 @@ export default function PortfolioScrollAlt() {
     <div className="portfolio-showcase" ref={sectionRef}>
       <div className="portfolio-header">
       
-        <h1>Portfolio</h1>
+        <h2>Portfolio</h2>
         <div className="header-line"></div>
       </div>
 

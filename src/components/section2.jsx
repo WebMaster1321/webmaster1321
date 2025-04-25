@@ -83,7 +83,7 @@ export default function Section2() {
     <div className="services-section" ref={sectionRef}>
       <div className="services-container">
         <div className="services-header">
-          <h1>Signature Services.</h1>
+          <h2>Signature Services.</h2>
           <div className="divider"></div>
         </div>
 
