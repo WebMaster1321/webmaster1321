@@ -234,13 +234,7 @@ body {
   }
 }
 /* Abstand zwischen Section2 und Section3 wiederherstellen */
-.section2-container {
-  margin-bottom: 60px;
-}
 
-.section3-container {
-  padding-top: 40px;
-}
 
 /* Optional für Tablets im Hochformat */
 @media (max-width: 1024px) {
