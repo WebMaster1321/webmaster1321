@@ -1,0 +1,476 @@
+/* ========== BASIS ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.full-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  flex-direction: row;
+}
+
+.first-half {
+  background-color: rgba(40, 40, 40, 0.979);
+  width: 35%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: min(5%, 30px) min(3%, 20px);
+  position: relative;
+}
+
+.text-container {
+  width: 100%;
+  padding-top: min(15vh, 100px);
+  max-width: min(90%, 450px);
+  margin: 0 auto;
+}
+
+.second-half {
+  width: 65%;
+  min-height: 100vh;
+  display: flex;
+  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.images-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  padding-top: min(8vh, 60px);
+}
+
+.orthogonal-image {
+  position: relative;
+  max-width: min(30vw, 250px);
+  width: 30%;
+  height: auto;
+  z-index: 2;
+ 
+  border-radius: 20px;
+  transform: translateX(-30%) rotateY(10deg);
+  transition: all 0.3s ease;
+}
+
+.diagonal-image {
+  position: relative;
+  max-width: min(30vw, 250px);
+  width: 30%;
+  height: auto;
+  z-index: 1;
+  
+  border-radius: 20px;
+  transform: translateX(10%) rotateY(-10deg);
+  margin-left: -10%;
+  transition: all 0.3s ease;
+}
+
+.title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(28px, 5vw, 70px);
+  font-weight: 200;
+  color: #ffffff;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  word-wrap: break-word;
+  hyphens: auto;
+  width: 100%;
+}
+
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 300;
+  color: #ffffff;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  background-color: #141414;
+  color: rgb(255, 255, 255);
+  padding: clamp(10px, 2vh, 15px) clamp(20px, 4vw, 40px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  z-index: 1000;
+  height: 12%;
+ 
+}
+
+.desktop-nav-links {
+  list-style: none;
+  display: flex;
+  gap: clamp(15px, 2vw, 30px);
+  font-size: clamp(12px, 1vw, 14px);
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  color: gray;
+}
+
+/* Hamburger Menü */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Sidebar für Mobile */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background-color: #1a1a1a;
+  z-index: 1002;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.mobile-sidebar.open {
+  right: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.close-button {
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-links li {
+  padding: 15px 0;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  color: white;
+  transition: color 0.2s;
+}
+
+.sidebar-links li:hover {
+  color: #4f46e5;
+}
+
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  display: none;
+}
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+/* Tablets & Kleinere Bildschirme */
+@media screen and (max-width: 992px) {
+  .full-container {
+    flex-direction: column;
+  }
+
+  .first-half, 
+  .second-half {
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .first-half {
+    padding: min(8vh, 50px) min(5%, 30px);
+  }
+
+  .text-container {
+    text-align: center;
+    padding-top: min(10vh, 60px);
+    max-width: min(90%, 500px);
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .orthogonal-image {
+    transform: translateX(-10%) rotateY(10deg);
+  }
+
+  .diagonal-image {
+    transform: translateX(10%) rotateY(-10deg);
+  }
+
+  nav {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: none;
+    border-radius: 0;
+    padding: 15px 20px;
+  }
+
+  .desktop-nav-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+}
+
+/* Smartphones */
+@media screen and (max-width: 576px) {
+  .first-half, 
+  .second-half {
+    min-height: 40vh;
+    padding: 30px 20px;
+  }
+
+  .text-container {
+    padding-top: min(8vh, 40px);
+  }
+
+  .images-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .orthogonal-image,
+  .diagonal-image {
+    max-width: min(80%, 180px);
+    width: 80%;
+  }
+
+  .orthogonal-image {
+    transform: none;
+  }
+
+  .diagonal-image {
+    transform: rotate(5deg);
+    margin-left: 0;
+    
+  }
+
+  nav {
+    padding: 10px 20px;
+  }
+}
+
+/* Landscape Mode für alle Geräte */
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .full-container {
+    flex-direction: row;
+  }
+
+  .first-half {
+    width: 40%;
+    min-height: 100vh;
+  }
+
+  .second-half {
+    width: 60%;
+    min-height: 100vh;
+  }
+
+  .text-container {
+    text-align: left;
+    padding-top: min(8vh, 40px);
+  }
+
+  .subtitle {
+    text-align: left;
+  }
+
+  .images-container {
+    flex-direction: row;
+  }
+
+  .orthogonal-image,
+  .diagonal-image {
+    width: 45%;
+  }
+
+  .orthogonal-image {
+    transform: translateX(-20%) rotateY(10deg);
+  }
+
+  .diagonal-image {
+    transform: translateX(10%) rotateY(-10deg);
+    margin-left: -15%;
+    margin-top: 0;
+  }
+}
+
+/* Kleine Smartphones */
+@media screen and (max-width: 375px) {
+  .orthogonal-image,
+  .diagonal-image {
+    max-width: min(80%, 160px);
+  }
+}
+
+/* Extremely small screens */
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: clamp(24px, 4vw, 28px);
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
+}
+
+/* Sehr hohe Screens */
+@media screen and (min-height: 900px) {
+  .text-container {
+    padding-top: min(20vh, 120px);
+  }
+}
+
+/* Sehr niedrige Screens */
+@media screen and (max-height: 500px) {
+  .text-container {
+    padding-top: min(5vh, 30px);
+  }
+  
+  .title {
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    margin-top: 5px;
+  }
+}
+
+/* Erhöhe die Perspektive für einen besseren 3D-Effekt */
+.images-container {
+  perspective: 1200px;
+}
+
+/* Anfangszustand für die Bilder - vor der Animation */
+.orthogonal-image:not(.animate-in) {
+  opacity: 0;
+  transform: translateX(-100vw) rotateY(-45deg) rotateZ(-10deg);
+  transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.diagonal-image:not(.animate-in) {
+  opacity: 0;
+  transform: translateX(100vw) rotateY(45deg) rotateZ(10deg);
+  transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Finaler Zustand - nach der Animation */
+.orthogonal-image.animate-in {
+  opacity: 1;
+  transform: translateX(-30%) rotateY(10deg) rotateZ(0deg);
+  transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.diagonal-image.animate-in {
+  opacity: 1;
+  transform: translateX(10%) rotateY(-10deg) rotateZ(0deg);
+  transition: all 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Hover-Effekte für zusätzliche Interaktivität */
+.orthogonal-image:hover,
+.diagonal-image:hover {
+  transform: scale(1.05) translateZ(30px);
+
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+/* Anpassungen für Mobile-Ansicht */
+@media screen and (max-width: 576px) {
+  .orthogonal-image:not(.animate-in) {
+    transform: translateY(-100vh) rotateX(45deg);
+  }
+  
+  .diagonal-image:not(.animate-in) {
+    transform: translateY(100vh) rotateX(-45deg);
+  }
+  
+  .orthogonal-image.animate-in {
+    transform: translateY(0) rotateX(0);
+  }
+  
+  .diagonal-image.animate-in {
+    transform: translateY(0) rotate(5deg);
+  }
+  
+  /* Anpassung der Hover-Effekte für Mobile */
+  .orthogonal-image:hover,
+  .diagonal-image:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* Anpassungen für den Landscape-Modus */
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .orthogonal-image.animate-in {
+    transform: translateX(-20%) rotateY(10deg);
+  }
+  
+  .diagonal-image.animate-in {
+    transform: translateX(10%) rotateY(-10deg);
+  }
+}

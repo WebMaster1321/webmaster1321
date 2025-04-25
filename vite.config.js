@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/meine-website/',
+  base: '/webmaster1321/',
   resolve: {
     alias: {
       '@': '/src', // Dies stellt sicher, dass `@` auf das `src`-Verzeichnis zeigt

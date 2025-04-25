@@ -3,98 +3,14 @@ import { useNavigate } from "react-router-dom"
 import { useState } from "react"
 
 export default function AboutPage() {
-  const navigate = useNavigate()
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen)
-  }
-
-  const handleNavigate = (sectionId) => {
-    navigate("/", { state: { scrollTo: sectionId } });
-  };
-
+ 
   return (
     <div className="about-container">
       
        
-      <nav
-        className={`bg-[#1a1a1a] text-white py-3 px-6 flex justify-between items-center text-sm ${mobileMenuOpen ? "mobile-menu-open" : ""}`}
-      >
-        {/* Logo */}
-        <div className="text-base font-bold">Web-Master</div>
+   
 
-        {/* Hamburger Menu für Mobile */}
-        <div className="hamburger-menu" onClick={toggleMobileMenu}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        {/* Navigation Links für Desktop */}
-        <ul className="desktop-nav-links" style={{marginLeft:'80px'}}>
-          <li className="hover:text-gray-400 cursor-pointer" onClick={() => navigate("/")}>
-            Startseite
-          </li>
-          <li className="hover:text-gray-400 cursor-pointer" onClick={() => navigate("/about")}>
-            Über uns
-          </li>
-         
-          <li className="hover:text-gray-400 cursor-pointer" onClick={() => navigate("/contact")}>
-            Kontakt
-          </li>
-        </ul>
-
-        {/* Such-Icon */}
-        <div className="cursor-pointer search-icon">
-          <img
-            className="w-6 h-6"
-            src="https://img.icons8.com/ios-filled/50/FFFFFF/circled-w.png"
-            alt="search"
-            style={{ width: "24px", height: "24px", float: "right" }}
-          />
-        </div>
-      </nav>
-
-      {/* Mobile Sidebar Navigation */}
-      <div className={`mobile-sidebar ${mobileMenuOpen ? "open" : ""}`}>
-        <div className="sidebar-header">
-          <div className="text-base font-bold">Web-Master</div>
-          <div className="close-button" onClick={toggleMobileMenu}>
-            ×
-          </div>
-        </div>
-        <ul className="sidebar-links">
-          <li
-            onClick={() => {
-              navigate("/")
-              setMobileMenuOpen(false)
-            }}
-          >
-            Startseite
-          </li>
-          <li
-            onClick={() => {
-              navigate("/about")
-              setMobileMenuOpen(false)
-            }}
-          >
-            Über uns
-          </li>
-         
-          <li
-            onClick={() => {
-              navigate("/contact")
-              setMobileMenuOpen(false)
-            }}
-          >
-            Kontakt
-          </li>
-        </ul>
-      </div>
-
-      {/* Overlay für Mobile Sidebar */}
-      {mobileMenuOpen && <div className="mobile-overlay" onClick={toggleMobileMenu}></div>}
-
+     
 
 
 
@@ -120,8 +36,8 @@ export default function AboutPage() {
             </p>
             <div className="stats-container">
               <div className="stat-item">
-                <span className="stat-number">100%</span>
-                <span className="stat-label">Kundenzufriedenheit</span>
+                 {/*<span className="stat-number">100%</span>*/}
+                 {/*<span className="stat-label">Kundenzufriedenheit</span>*/}
               </div>
               <div className="stat-item">
                 <span className="stat-number">24/7</span>
@@ -135,7 +51,7 @@ export default function AboutPage() {
           </div>
           <div className="intro-image">
             <div className="image-container">
-              <div className="image-placeholder"><img src="webmaster.jpg" alt="webmaster" /></div>
+              <div className="image-placeholder"><img src="/webmaster1321/webmaster.jpg" alt="webmaster" /></div>
               <div className="image-accent green"></div>
             </div>
           </div>
@@ -225,7 +141,7 @@ export default function AboutPage() {
           </div>
           <div className="pricing-image">
             <div className="image-container">
-              <div className="image-placeholder"><img src="preis.jpg" alt="preis" /></div>
+              <div className="image-placeholder"><img src="/webmaster1321/preis.jpg" alt="preis" /></div>
               <div className="image-accent red"></div>
             </div>
           </div>
@@ -278,7 +194,7 @@ export default function AboutPage() {
               schnell und erstelle Ihnen ein individuelles Angebot, das perfekt zu Ihrem Projekt passt.
             </p>
             <div className="cta-buttons">
-              <a  className="cta-button email"   onClick={() => navigate("/contact")}>
+              <a  className="cta-button email"   onClick={() => navigate("/kontact")}>
                 Kontaktieren
               </a>
             </div>

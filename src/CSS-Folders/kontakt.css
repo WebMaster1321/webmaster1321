@@ -12,44 +12,39 @@
     background-color: #f5f5f5;
   }
   
-  .page-container {
+  .page-container-9 {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
   
-
-  
-  /* Main Content */
-  .main-content {
+  .main-content-9 {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    padding-top: 60px; /* ← weiter oben */
     flex: 1;
-    padding-top: 200px;
   }
   
-  /* Contact Header */
-  .contact-header {
+  .contact-header-9 {
     text-align: center;
     margin-bottom: 3rem;
   }
   
-  .contact-header h1 {
+  .contact-header-9 h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #1a1a1a;
   }
   
-  .contact-header p {
+  .contact-header-9 p {
     font-size: 1.1rem;
     color: #666;
     max-width: 700px;
     margin: 0 auto;
   }
   
-  /* Status Message */
-  .status-message {
+  .status-message-9 {
     background-color: #4f46e5;
     color: white;
     padding: 1rem;
@@ -58,8 +53,7 @@
     text-align: center;
   }
   
-  /* Contact Form */
-  .contact-form-container {
+  .contact-form-container-9 {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -67,50 +61,48 @@
     margin-bottom: 3rem;
   }
   
-  .form-row {
+  .form-row-9 {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
   }
   
-  .form-group {
+  .form-group-9 {
     margin-bottom: 1.5rem;
   }
   
-  .form-group label {
+  .form-group-9 label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
     color: #333;
   }
   
-  .form-group input,
-  .form-group textarea {
+  .form-group-9 input,
+  .form-group-9 textarea {
     width: 100%;
     padding: 0.75rem;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
-    transition: border-color 0.3s;
-    background-color: #ffffff; /* Explizit weiß setzen */
-    color: #333; /* Textfarbe auf dunkel setzen */
+    background-color: #ffffff;
+    color: #333;
   }
   
-  .form-group input:focus,
-  .form-group textarea:focus {
+  .form-group-9 input:focus,
+  .form-group-9 textarea:focus {
     outline: none;
     border-color: #4f46e5;
     box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
-    background-color: #ffffff; /* Auch beim Fokus weiß bleiben */
   }
   
-  .form-group input::placeholder,
-  .form-group textarea::placeholder {
-    color: #999; /* Hellere Farbe für Platzhaltertext */
+  .form-group-9 input::placeholder,
+  .form-group-9 textarea::placeholder {
+    color: #999;
   }
   
-  .submit-button {
+  .submit-button-9 {
     background-color: #4f46e5;
     color: white;
     border: none;
@@ -122,24 +114,23 @@
     transition: background-color 0.3s;
   }
   
-  .submit-button:hover {
+  .submit-button-9:hover {
     background-color: #4338ca;
   }
   
-  .submit-button:disabled {
+  .submit-button-9:disabled {
     background-color: #a5a5a5;
     cursor: not-allowed;
   }
   
-  /* Contact Info */
-  .contact-info {
+  .contact-info-kontakt-9 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin-bottom: 3rem;
   }
   
-  .info-card {
+  .info-card-kontakt-9 {
     background-color: white;
     border-radius: 8px;
     padding: 1.5rem;
@@ -147,7 +138,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  .info-icon {
+  .info-icon-kontakt-9 {
     width: 50px;
     height: 50px;
     background-color: rgba(79, 70, 229, 0.1);
@@ -158,68 +149,36 @@
     margin: 0 auto 1rem;
   }
   
-  .info-icon svg {
+  .info-icon-kontakt-9 svg {
     width: 24px;
     height: 24px;
     color: #4f46e5;
   }
   
-  .info-card h3 {
+  .info-card-kontakt-9 h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     color: #333;
   }
   
-  .info-card p {
+  .info-card-kontakt-9 p {
     color: #666;
   }
   
-  /* Footer */
-  .footer {
-    background-color: #1a1a1a;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    margin-top: auto;
-  }
-  
-  /* Responsive Design */
   @media (min-width: 768px) {
-    .form-row {
+    .form-row-9 {
       flex-direction: row;
     }
   
-    .form-row .form-group {
+    .form-row-9 .form-group-9 {
       flex: 1;
     }
   
-    .contact-info {
+    .contact-info-kontakt-9 {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      padding: 1rem;
-    }
   
-    .navbar-logo {
-      margin-bottom: 1rem;
-    }
-  
-    .navbar-links {
-      margin-bottom: 1rem;
-    }
-  
-    .navbar-links li {
-      margin: 0 0.5rem;
-      font-size: 0.9rem;
-    }
-  
-    .contact-header h1 {
-      font-size: 2rem;
-    }
-  }
   
   
