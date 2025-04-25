@@ -148,7 +148,7 @@ export default function AboutPage() {
         </div>
 
         <div className="about-process">
-          <h2>Mein Arbeitsprozess</h2>
+          <h2>Unser Arbeitsprozess</h2>
           <div className="process-steps">
             <div className="process-step">
               <div className="step-number">01</div>
