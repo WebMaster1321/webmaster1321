@@ -12,7 +12,7 @@ export default function Section2() {
     {
       id: "landing",
       title: "Landing Page",
-      price: "€650",
+      price: "€550",
       tagline: "Perfekt für Produkt-Launches",
       description:
         "Eine Landing Page ist eine speziell gestaltete Seite, die darauf abzielt, Besucher zu einer bestimmten Aktion zu bewegen, z. B. ein Produkt zu kaufen oder sich für einen Newsletter anzumelden.",
@@ -20,7 +20,7 @@ export default function Section2() {
     {
       id: "business",
       title: "Business Website",
-      price: "€700",
+      price: "€600",
       tagline: "Komplette Online-Präsenz",
       description:
         "Eine Business-Website stellt dein Unternehmen online dar und bietet umfassende Informationen zu deinen Dienstleistungen, deinem Team und deinen Kontaktmöglichkeiten.",
@@ -28,7 +28,7 @@ export default function Section2() {
     {
       id: "portfolio",
       title: "Portfolio",
-      price: "€600",
+      price: "€500",
       tagline: "Präsentiere deine Arbeiten",
       description:
         "Eine Portfolio-Website zeigt deine Arbeiten und Projekte in einem ansprechenden Design. Perfekt für Designer, Fotografen oder Künstler.",
