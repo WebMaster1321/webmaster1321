@@ -33,9 +33,9 @@ const Home = () => {
          
 
           <div className="hero-content">
-            <h1 className={`main-heading ${headingVisible ? 'heading-visible' : ''}`}>
+            <h2 className={`main-heading ${headingVisible ? 'heading-visible' : ''}`}>
             Gestalte das Web neu – mit WebMaster.
-            </h1>
+            </h2>
           
           </div>
 
