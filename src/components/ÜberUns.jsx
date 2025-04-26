@@ -194,7 +194,7 @@ export default function AboutPage() {
               schnell und erstellen Ihnen ein individuelles Angebot, das perfekt zu Ihrem Projekt passt.
             </p>
             <div className="cta-buttons">
-              <a  className="cta-button email"   onClick={() => navigate("/kontact")}>
+              <a  className="cta-button email"   onClick={() => navigate("/kontakt")}>
                 Kontaktieren
               </a>
             </div>
